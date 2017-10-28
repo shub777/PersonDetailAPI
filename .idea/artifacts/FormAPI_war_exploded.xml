@@ -11,29 +11,29 @@
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.sun.jersey:jersey-bundle:1.18.3" />
           <element id="library" level="application" name="Jersey-2.2" />
-          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-bundle:1.18" />
-          <element id="library" level="project" name="Maven: asm:asm:3.1" />
           <element id="library" level="project" name="Maven: com.sun.xml.bind:jaxb-impl:2.2.3-1" />
           <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
           <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.2.2" />
           <element id="library" level="project" name="Maven: javax.xml.stream:stax-api:1.0-2" />
           <element id="library" level="project" name="Maven: junit:junit:4.8.2" />
-          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.7.1" />
-          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-jaxrs:1.7.1" />
-          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.7.1" />
-          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-xc:1.7.1" />
-          <element id="library" level="project" name="Maven: org.codehaus.jettison:jettison:1.1" />
           <element id="library" level="application" name="jersey-json-1.19" />
           <element id="file-copy" path="$USER_HOME$/Desktop/jersey-archive-1.17.1/lib/jersey-client-1.17.1.jar" />
           <element id="file-copy" path="$USER_HOME$/Desktop/jersey-archive-1.17.1/lib/jersey-server-1.17.1.jar" />
-          <element id="file-copy" path="$USER_HOME$/Desktop/jersey-archive-1.17.1/lib/jsr311-api-1.1.1.jar" />
           <element id="file-copy" path="$USER_HOME$/Desktop/jersey-archive-1.17.1/lib/asm-3.1.jar" />
-          <element id="file-copy" path="$USER_HOME$/Desktop/Jackson/jsr311-api-1.0.jar" />
-          <element id="file-copy" path="$USER_HOME$/Desktop/Jackson/jersey-client-1.0.2.jar" />
-          <element id="file-copy" path="$USER_HOME$/Desktop/Jackson/jersey-core-1.0.3.jar" />
-          <element id="file-copy" path="$USER_HOME$/Desktop/Jackson/jersey-server-1.0.3.jar" />
           <element id="file-copy" path="$USER_HOME$/Desktop/jersey-archive-1.17.1/lib/jersey-core-1.17.1.jar" />
           <element id="file-copy" path="$USER_HOME$/Desktop/Jackson/com.mysql.jdbc_5.1.5.jar" />
+          <element id="file-copy" path="$USER_HOME$/Desktop/Jackson/jerseyjars/asm-debug-all-5.0.2.jar" />
+          <element id="file-copy" path="$USER_HOME$/Desktop/jersey-archive-1.17.1/lib/jackson-core-asl-1.9.2.jar" />
+          <element id="file-copy" path="$USER_HOME$/Desktop/jersey-archive-1.17.1/lib/jettison-1.1.jar" />
+          <element id="file-copy" path="$USER_HOME$/Desktop/jersey-archive-1.17.1/lib/jackson-xc-1.9.2.jar" />
+          <element id="file-copy" path="$USER_HOME$/Desktop/jersey-archive-1.17.1/lib/jackson-mapper-asl-1.9.2.jar" />
+          <element id="file-copy" path="$USER_HOME$/Desktop/jersey-archive-1.17.1/lib/jackson-jaxrs-1.9.2.jar" />
+          <element id="file-copy" path="$USER_HOME$/Desktop/Jackson/JsonFormatterPlugin/lib/antlr-2.7.7.jar" />
+          <element id="file-copy" path="$USER_HOME$/Desktop/Jackson/JsonFormatterPlugin/lib/jsontools-core-1.7.jar" />
+          <element id="file-copy" path="$USER_HOME$/Desktop/Jackson/JsonFormatterPlugin/lib/rsyntaxtextarea-1.2.3.jar" />
+          <element id="file-copy" path="$USER_HOME$/Desktop/Jackson/jerseyjars/jersey-media-multipart-2.13.jar" />
+          <element id="file-copy" path="$USER_HOME$/Desktop/jersey-multipart-1.8.jar" />
+          <element id="library" level="project" name="Maven: javax.ws.rs:jsr311-api:1.1.1" />
         </element>
       </element>
     </root>

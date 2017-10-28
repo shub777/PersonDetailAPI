@@ -11,6 +11,10 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <h1>Upload File</h1>
+  <form action="rest/test/upload" method="post" enctype="multipart/form-data">
+    <p>Select a file : <input type="file" name="file"/></p>
+    <input type="submit" value="Upload File" />
+  </form>
   </body>
 </html>
