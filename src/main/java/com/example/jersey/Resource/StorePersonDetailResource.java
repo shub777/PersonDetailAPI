@@ -11,12 +11,13 @@ import java.net.URI;
 import java.util.List;
 
 @Path("/store")
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 public class StorePersonDetailResource {
 
     StorePersonDetailService storePersonDetailService = new StorePersonDetailService();
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
     public List<StorePersonDetailModel> ShowPersonDetail() throws Exception {
         return storePersonDetailService.getPersonDetail();
     }
@@ -29,5 +30,23 @@ public class StorePersonDetailResource {
                 .path(newId)
                 .build();
         return Response.created(uri).entity(newStorePersonDetailModel).build();
+    }
+
+    @DELETE
+    @Path("/{id}")
+    public void deletePersonDetailFromId(@PathParam("id")long id) throws Exception {
+        storePersonDetailService.deletePersonDetailFromId(id);
+    }
+
+    @PUT
+    @Path("/{id}")
+    public StorePersonDetailModel updatePersonDetailFromId(StorePersonDetailModel storePersonDetailModel,@PathParam("id") long id) throws Exception{
+        return storePersonDetailService.updatePersonDetailFromId(storePersonDetailModel,id);
+    }
+
+    @GET
+    @Path("/{id}")
+    public StorePersonDetailModel getPersonDetailFromId(@PathParam("id") long id) throws Exception{
+        return storePersonDetailService.getPersonDetailFromId(id);
     }
 }

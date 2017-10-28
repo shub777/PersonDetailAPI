@@ -20,4 +20,25 @@ public class SecurityManager {
         GetHandlerFromMySQL getHandlerFromMySQL = new GetHandlerFromMySQL();
         return getHandlerFromMySQL.postAllDetails(connection,storePersonDetailModel);
     }
+
+    public void deletePersonDetailFromId(long id) throws Exception {
+        DbConnection dbConnection = new DbConnection();
+        Connection connection = dbConnection.getConnection();
+        GetHandlerFromMySQL getHandlerFromMySQL = new GetHandlerFromMySQL();
+        getHandlerFromMySQL.deletePersonDetailFromId(connection,id);
+    }
+
+    public StorePersonDetailModel updatePersonDetalFromId(StorePersonDetailModel storePersonDetailModel, long id) throws Exception {
+        DbConnection dbConnection = new DbConnection();
+        Connection connection = dbConnection.getConnection();
+        GetHandlerFromMySQL getHandlerFromMySQL = new GetHandlerFromMySQL();
+        return getHandlerFromMySQL.updatePersonDetailFromId(connection,id,storePersonDetailModel);
+    }
+
+    public StorePersonDetailModel getPersonDetailFromId(long id) throws Exception {
+        DbConnection dbConnection = new DbConnection();
+        Connection connection = dbConnection.getConnection();
+        GetHandlerFromMySQL getHandlerFromMySQL = new GetHandlerFromMySQL();
+        return getHandlerFromMySQL.getPersonDetailFromId(connection,id);
+    }
 }

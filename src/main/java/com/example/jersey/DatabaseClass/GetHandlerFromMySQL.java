@@ -37,4 +37,34 @@ public class GetHandlerFromMySQL {
         preparedStatement.executeUpdate();
         return storePersonDetailModel;
     }
+
+    public void deletePersonDetailFromId(Connection connection,long id) throws SQLException {
+        PreparedStatement preparedStatement = connection.prepareStatement("delete from personDetail where id = " + id);
+        preparedStatement.executeUpdate();
+    }
+
+    public StorePersonDetailModel updatePersonDetailFromId(Connection connection, long id, StorePersonDetailModel storePersonDetailModel) throws SQLException {
+        PreparedStatement preparedStatement = connection.prepareStatement("UPDATE personDetail set id = " + id + ", firstname = '" +
+                storePersonDetailModel.getFirstName() + "', lastname = '" + storePersonDetailModel.getLastName() + "', address = '" + storePersonDetailModel.getAddress() +
+                "', contactnumber = '" + storePersonDetailModel.getContactNumber() + "', gender = '" + storePersonDetailModel.getGender() + "', pincode = '" +
+                storePersonDetailModel.getPincode() + "' where id = " + id + ";");
+        preparedStatement.executeUpdate();
+        return getPersonDetailFromId(connection, id);
+    }
+
+    public StorePersonDetailModel getPersonDetailFromId(Connection connection,long id) throws SQLException {
+        PreparedStatement ps = connection.prepareStatement("select * from personDetail where id = " + id);
+        ResultSet resultSet = ps.executeQuery();
+        StorePersonDetailModel model = new StorePersonDetailModel();
+        while(resultSet.next()){
+            model.setId(resultSet.getLong(1));
+            model.setFirstName(resultSet.getString(2));
+            model.setLastName(resultSet.getString(3));
+            model.setAddress(resultSet.getString(4));
+            model.setContactNumber(resultSet.getString(5));
+            model.setGender(resultSet.getString(6));
+            model.setPincode(resultSet.getString(7));
+        }
+        return model;
+    }
 }
